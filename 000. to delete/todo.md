@@ -1,3 +1,10 @@
+## TODOs in code
+- database.js
+- install.js
+- src-sw.js
+- webpack.config.js
+
+
 ## summary:
 a text editor that runs in the browser
 - single-page application that meets the PWA criteria
