@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
-// for service worker; GenerateSW class from WorkBoxPlugin
+// for service worker
 const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = () => {
