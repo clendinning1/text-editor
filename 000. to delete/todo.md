@@ -4,6 +4,7 @@
 - src-sw.js
 - webpack.config.js
 - deal w caching last
+- do we need to link scripts into the index.html?
 
 ## summary:
 a text editor that runs in the browser
