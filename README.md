@@ -11,4 +11,4 @@ desc
 - []()
 
 ### References
-- []()
+- [IDB docs](https://www.npmjs.com/package/idb)
