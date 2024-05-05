@@ -28,4 +28,5 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
 // see 17 for this step?
+// do this last b/c it's optimization
 registerRoute();

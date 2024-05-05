@@ -3,7 +3,7 @@
 - install.js
 - src-sw.js
 - webpack.config.js
-
+- deal w caching last
 
 ## summary:
 a text editor that runs in the browser
