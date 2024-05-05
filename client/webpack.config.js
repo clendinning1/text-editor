@@ -24,6 +24,9 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'service-worker.js',
       }), 
+      new WebpackPwaManifest({
+
+      }),
     ],
 
     module: {
