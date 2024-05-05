@@ -1,11 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
+// for service worker; GenerateSW class from WorkBoxPlugin
 const { InjectManifest } = require('workbox-webpack-plugin');
-
-// TODO: Add and configure workbox plugins for 
-//    1. service worker 
-//    2. manifest file.
 
 module.exports = () => {
   return {
@@ -14,9 +11,6 @@ module.exports = () => {
       main: './src/js/index.js',
       install: './src/js/install.js'
     },
-    devServer: {
-      hot: 'only',
-    },
     output: {
       filename: '[name].bundle.js', // [name] ??
       path: path.resolve(__dirname, 'dist'),
@@ -24,8 +18,12 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'J.A.T.E.'
+        title: 'Webpack Plugin'
       }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js',
+      }), 
     ],
 
     module: {
