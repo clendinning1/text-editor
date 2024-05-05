@@ -14,7 +14,7 @@ const initdb = async () =>
   });
 
   
-// accepts some content and adds it to the database
+// accepts some content and puts it to the database
 export const putDb = async (content) => {
   console.log('Put to the database');
 
@@ -27,8 +27,8 @@ export const putDb = async (content) => {
   // open the object store
   const store = tx.objectStore('jate');
 
-  // add method passes content into the store
-  const request = store.add({ jate: content });
+  // put method passes content into the store
+  const request = store.put({ jate: content });
 
   // req confirmation
   const result = await request;
@@ -37,51 +37,24 @@ export const putDb = async (content) => {
 
 
 
+// gets all the content from the database
+export const getDb = async () => {
+  console.log('Get all from the database');
 
+  const jateDb = await openDB('jate', 1);
 
-// TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => console.error('getDb not implemented');
+  // readonly because we're only getting info, not adding or editing
+  const tx = jateDb.transaction('jate', 'readonly');
 
-// example
-// // Export a function we will use to GET all from the database.
-// export const getAllDb = async () => {
-//   console.log('GET all from the database');
+  const store = tx.objectStore('jate');
 
-//   // Create a connection to the database database and version we want to use.
-//   const todosDb = await openDB('todos', 1);
+  // getAll does what it says on the tin
+  const request = store.getAll();
 
-//   // Create a new transaction and specify the database and data privileges.
-//   const tx = todosDb.transaction('todos', 'readonly');
-
-//   // Open up the desired object store.
-//   const store = tx.objectStore('todos');
-
-//   // Use the .getAll() method to get all data in the database.
-//   const request = store.getAll();
-
-//   // Get confirmation of the request.
-//   const result = await request;
-//   console.log('result.value', result);
-//   return result;
-// };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  const result = await request;
+  console.log('result.value', result);
+  return result;
+};
 
 
 
