@@ -30,8 +30,8 @@ module.exports = () => {
         description: 'just another text editor',
         background_color: '#7eb4e2',
         // theme_color: '#7eb4e2',
-        // start_url: './',
-        // publicPath: './',
+        start_url: './',
+        publicPath: './',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
