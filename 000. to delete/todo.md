@@ -1,9 +1,6 @@
 ## TODOs in code
-- database.js
 - install.js
-- src-sw.js
 
-- deal w caching last
 - do we need to link scripts into the index.html?
 
 ## summary:
@@ -11,12 +8,6 @@ a text editor that runs in the browser
 - single-page application that meets the PWA criteria
 - will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser
 - will also function offline.
-
-## general to do:
-- implement methods for getting and storing data to an IndexedDB database
-- You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. (it features a number of methods that are useful for storing and retrieving data)
-- deploy to Render
-    - make sure your submission includes the `.npmrc` file in this starter code.  This will ensure your application will deploy properly to Render.
 
 ## specific to do:
 - WHEN I open my application in my editor THEN I should see a client server folder structure

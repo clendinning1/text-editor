@@ -11,4 +11,5 @@ desc
 - []()
 
 ### References
-- []()
+- [IDB docs](https://www.npmjs.com/package/idb)
+- [Workbox docs - Precaching](https://developer.chrome.com/docs/workbox/precaching-with-workbox/)

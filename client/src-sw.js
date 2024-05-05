@@ -26,7 +26,45 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
-// see 17 for this step?
-// do this last b/c it's optimization
+// register route for caching dynamic css and js files
+registerRoute(
+  ({ request }) => {
+    console.log(request);
+    return (
+      // CSS
+      request.destination === 'style' ||
+      // JavaScript
+      request.destination === 'script'
+    );
+  },
+  // serves content from cache and loads it from source if needed
+  new StaleWhileRevalidate({
+    cacheName: 'static-resources',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
+);
+
+// rr for caching dynamic images
+registerRoute(
+  ({ request }) => request.destination === 'image',
+  new CacheFirst({
+    cacheName: 'my-image-cache',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
+  })
+);
+
+
+
 registerRoute();
