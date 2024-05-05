@@ -1,8 +1,6 @@
 ## TODOs in code
 - install.js
-- src-sw.js
 
-- deal w caching last
 - do we need to link scripts into the index.html?
 
 ## summary:
