@@ -9,3 +9,5 @@ butInstall.addEventListener('click', async () => {});
 
 // TODO: Add an handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {});
+
+// see 25 for an example
