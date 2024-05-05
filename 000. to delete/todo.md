@@ -1,5 +1,4 @@
 ## TODOs in code
-- database.js
 - install.js
 - src-sw.js
 
