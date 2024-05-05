@@ -18,12 +18,12 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // see activity 09
     ],
 
     module: {
       rules: [
-        
+        // see activity 05 in recording
       ],
     },
   };
