@@ -21,8 +21,8 @@ module.exports = () => {
         title: 'Webpack Plugin'
       }),
       new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'service-worker.js', // is this correct? is this what's causing the issue?
+        swSrc: './src-sw.js',         //
+        swDest: 'service-worker.js', // are these lines correct? is this what's causing the issue?
       }), 
       new WebpackPwaManifest({
         name: 'JATE',
