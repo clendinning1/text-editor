@@ -1,14 +1,3 @@
-## TODOs in code
-- install.js
-
-- do we need to link scripts into the index.html?
-
-## summary:
-a text editor that runs in the browser
-- single-page application that meets the PWA criteria
-- will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser
-- will also function offline.
-
 ## specific to do:
 - WHEN I open my application in my editor THEN I should see a client server folder structure
 - WHEN I run `npm run start` from the root directory THEN I find that my application should start up the backend and serve the client
@@ -24,26 +13,15 @@ a text editor that runs in the browser
 - WHEN I deploy to Render THEN I should have proper build scripts for a webpack application
 
 ## things showed in mockup:
-- can be used in the browser and then installed
-- application's `manifest.json` file in the browser
 - registered service worker in the browser
-- IndexedDB storage named 'jate' in the browser
 
 ### criteria:
-* Uses IndexedDB to create an object store and includes both GET and PUT methods
-
 * The application works without an internet connection
 
 * Automatically saves content inside the text editor when the DOM window is unfocused
 
-* Bundled with webpack
-
 * Create a service worker with workbox that Caches static assets
 
 * The application should use babel in order to use async / await
-
-* Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-* Can be installed as a Progressive Web Application
 
 * Application deployed to Render at live URL with build scripts
