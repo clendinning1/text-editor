@@ -34,7 +34,9 @@ registerRoute(
       // CSS
       request.destination === 'style' ||
       // JavaScript
-      request.destination === 'script'
+      request.destination === 'script' ||
+      // SW 
+      request.worker === 'worker'
     );
   },
   // serves content from cache and loads it from source if needed
@@ -47,6 +49,26 @@ registerRoute(
     ],
   })
 );
+
+// walter's code
+
+// registerRoute(
+//   ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+//   new StaleWhileRevalidate({
+//     cacheName: 'asset-cache',
+//     plugins: [
+//       new CacheableResponsePlugin({
+//         statuses: [0, 200],
+//       }),
+//     ],
+//   })
+// );
+
+
+
+
+
+
 
 // rr for caching dynamic images
 registerRoute(
@@ -64,6 +86,9 @@ registerRoute(
     ],
   })
 );
+
+
+
 
 
 
