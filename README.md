@@ -4,7 +4,7 @@
 JATE is a text editor that you can use online or off. Keep it in your browser, or install it! It even recognizes javascript code.
 
 ## Usage
-[Link to site]()
+[Link to site](https://text-editor-wvtd.onrender.com/)
 
 ## Sources
 ### Technologies
