@@ -30,5 +30,7 @@ window.addEventListener('appinstalled', (event) => {
     console.log("app installed");
 
     window.deferredPrompt = null;
+
+    butInstall.classList.toggle('hidden', true);
 });
 
